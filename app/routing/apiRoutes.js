@@ -12,10 +12,35 @@ module.exports = function(app) {
     });
 
     app.post("/api/friends", function(req, res) {
-        var surveyResults = req.body;
-        var userScores = surveyResults.scores;
-        console.log(userScores);
-        console.log("hello");
+        var userData = req.body;
+        var userScores = userData.scores;
+        
+        var closestMatch = {
+            "name" : "",
+            "photo" : "",
+            "compatibility" : 99
+        };
+
+        for (var i = 0; i < friendData.length; i++) {
+            var totalDifference = 0;
+
+            for (var j = 0; j < userScores.length; j++) {
+                var k = userScores[j];
+                var l = friendData[i].scores[j];
+                function diff(a, b) {
+                    return Math.abs(a - b);
+                };
+                totalDifference += diff(k, l);
+            }
+
+            if (totalDifference < closestMatch.compatibility) {
+                closestMatch.name = friendData[i].name;
+                closestMatch.photo = friendData[i].photo;
+                closestMatch.compatibility = totalDifference;
+            }
+
+        };
+        res.json(closestMatch);
     });
 
     
