@@ -5,9 +5,8 @@
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -37,7 +36,7 @@
         <hr>
 
         <h3><strong>Question 1</strong></h3>
-        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+        <h4>You believe in the importance of art.</h4>
         <select class="custom-select" id="q1">
             <option selected>Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -48,7 +47,7 @@
         </select>
 
         <h3><strong>Question 2</strong></h3>
-        <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+        <h4>It takes a lot to irritate or upset you.</h4>
         <select class="custom-select" id="q2">
             <option selected>Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -60,7 +59,7 @@
 
 
         <h3><strong>Question 3</strong></h3>
-        <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+        <h4>You have a vivid imagination and enjoy daydreaming.</h4>
         <select class="custom-select" id="q3">
             <option selected>Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -72,7 +71,7 @@
 
 
         <h3><strong>Question 4</strong></h3>
-        <h4>You rarely do something just out of sheer curiosity.</h4>
+        <h4>You prefer routine over variety.</h4>
         <select class="custom-select" id="q4">
             <option selected>Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -84,7 +83,7 @@
 
 
         <h3><strong>Question 5</strong></h3>
-        <h4>People can rarely upset you.</h4>
+        <h4>You think carefully before speaking.</h4>
         <select class="custom-select" id="q5">
             <option selected>Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -96,7 +95,7 @@
 
 
         <h3><strong>Question 6</strong></h3>
-        <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+        <h4>Generally, you think others' intentions are good.</h4>
         <select class="custom-select" id="q6">
             <option selected>Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -119,7 +118,7 @@
         </select>
 
         <h3><strong>Question 8</strong></h3>
-        <h4>You rarely get carried away by fantasies and ideas.</h4>
+        <h4>You'd rather do something just right, even if it means doing it yourself.</h4>
         <select class="custom-select" id="q8">
             <option selected>Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -130,8 +129,7 @@
         </select>
 
         <h3><strong>Question 9</strong></h3>
-        <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or
-            not.</h4>
+        <h4>You have a tendency to put things off until later.</h4>
         <select class="custom-select" id="q9">
             <option selected>Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -142,7 +140,7 @@
         </select>
 
         <h3><strong>Question 10</strong></h3>
-        <h4>You feel more energetic after spending time with a group of people.</h4>
+        <h4>You believe criminals should receive help rather than punishment.</h4>
         <select class="custom-select" id="q10">
             <option selected>Select an option</option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -167,13 +165,13 @@
 
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+                    <h3 class="modal-title"><strong>Your best match is...</strong></h3>
                 </div>
                 <div class="modal-body">
-                    <h2 id="match-name"></h2>
-                    <img id="match-img"
-                        src="" alt="">
+                    <div class="container-fluid">
+                        <h2 id="match-name"></h2>
+                        <img id="match-img" src="" alt="">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -224,7 +222,7 @@
 
                 });
             } else {
-                alert("Please fill out all fields before submitting!");
+                alert("Please answer every question before submitting!");
             }
         });
     </script>
